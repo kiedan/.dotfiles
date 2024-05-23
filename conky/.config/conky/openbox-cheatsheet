@@ -1,0 +1,11 @@
+A+E     | Terminal
+C+E     | FileManager
+S+E     | Webbrowser
+
+A+S+4   | Screenshot
+C+A+D   | Logout
+C+A+d   | htop
+
+
+----------------------------------
+A=ALT C=CTRL S=SHIFT E=ENTER D=DEL

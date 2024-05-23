@@ -1,0 +1,92 @@
+# System
+alias sudo='sudo '
+alias la="ls -A --color=always"
+alias ll="ls -lA --color=always"
+alias ls="ls --color=always"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ob="startx ~/.xinitrc openbox"
+alias i3="startx ~/.xinitrc i3"
+
+
+# Config
+alias i3config="nvim ~/.config/i3/config"
+alias tmuxconfig="nvim ~/.config/tmux/tmux.conf"
+alias zshconfig="nvim ~/.zshrc"
+alias aliases="nvim ~/.config/zsh/aliases"
+alias zshreload="source ~/.zshrc"
+alias urxvtconfig="nvim ~/.Xresources"
+alias urxvtreload="xrdb ~/.Xresources"
+alias vimconfig="nvim ~/.config/nvim/"
+alias polybarconfig="v ~/.config/polybar/config"
+alias polybarreload="pkill -USR1 polybar"
+alias openboxconfig="nvim ~/.config/openbox/rc.xml "
+alias openboxas="nvim ~/.config/openbox/autostart"
+alias sxhkdconfig="nvim ~/.config/sxhkd/sxhkdrc"
+alias sxhkdreload="pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'"
+
+# Applications
+alias v="nvim"
+alias vf='v $(fzf)'
+alias vimwiki="nvim ~/Nextcloud/SpaceNotes/index.md"
+alias ta="tmux attach"
+#alias fd="fdfind"
+
+# Pacman
+alias pacsyu="sudo pacman -Syu"	    # update database & upgrade
+#alias pacsy="sudo pacman -Sy"	    # update only
+#alias pacsu="sudo pacman -Su"	    # upgrade only
+alias pacs="sudo pacman -S"	    # sync (install)
+alias pacss="pacman -Ss"	    # search package
+alias pacr="sudo pacman -R"	    # only remove selected package
+alias pacrsn="sudo pacman -Rsn"      # remove package not leaving orphans
+
+#Yay
+alias yays="yay -S"
+alias yayss="yay -Ss"
+alias yaysyu="yay -Syu"
+
+# APT
+#alias update="sudo apt update"
+#alias upgrade="sudo apt upgrade"
+#alias install="sudo apt install"
+#alias remove="sudo apt-get --purge autoremove"
+# alias search="apt-cache search"
+
+# Nala
+alias update="sudo nala update"
+alias upgrade="sudo nala upgrade"
+alias install="sudo nala install"
+alias remove="sudo nala remove"
+alias purge="sudo nala purge"
+alias search="nala search"
+alias history="nala history"
+
+##Tools
+alias ipscan="nmap -sP 192.168.2.0/24"
+alias netstart="sudo systemctl restart networking.service"
+
+# Files and Stuff
+alias sunote="nvim ~/.dotfiles/setupnotes/setup.md"  
+
+
+# Webdev
+alias hss="hugo server --noHTTPCache"
+alias hssd="hugo server --noHTTPCache --bind 192.168.2.128 --baseURL http://192.168.2.128"
+alias xampp="sudo /opt/lampp/lampp start"
+alias vwp="nvim /opt/lampp/htdocs/gam/wp-content/themes/wooflex/"
+alias cdwp="cd /opt/lampp/htdocs/gam/wp-content/themes/wooflex/"
+alias startwp="sudo /opt/lampp/manager-linux-x64.run"
+
+# Display config
+alias rotatescreen="xrandr --output HDMI-A-0 --rotate left"
+alias rotatescreenn="xrandr --output HDMI-A-0 --rotate normal"
+
+# Vim
+alias ww="nvim -c 'cd /home/dan/Nextcloud/SpaceNotes | VimwikiIndex'"
+alias wd="nvim -/home/dan/Nextcloud/SpaceNotes -c VimwikiDiaryIndex"
+
+# Calcurse
+alias calcurse-caldav='CALCURSE_CALDAV_PASSWORD=$(pass show calcurse) calcurse-caldav'
+

@@ -1,0 +1,34 @@
+# launch authentication agent
+/usr/lib/polkit-1/polkit-agent-helper-1 &
+
+# Top Bar
+sh ~/.config/polybar/launch.sh &
+
+## Desktop notification
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
+
+# start compositor
+picom &
+
+# start urxvt terminal daemon
+urxvtd -q &
+
+# Set keyboard layout
+setxkbmap de
+
+# Set background image
+nitrogen --restore &
+
+# Applets
+nm-applet &
+volumeicon &
+xfce4-clipman &
+xfce4-power-manager &
+blueman-applet &
+
+
+# autostarting apps
+obsidian &
+syncthing-gtk &
+
+

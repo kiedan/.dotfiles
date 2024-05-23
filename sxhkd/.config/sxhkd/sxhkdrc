@@ -1,0 +1,46 @@
+#                 ██      ██          ██
+#                ░██     ░██         ░██
+#  ██████ ██   ██░██     ░██  ██     ░██
+# ██░░░░ ░░██ ██ ░██████ ░██ ██   ██████
+#░░█████  ░░███  ░██░░░██░████   ██░░░██
+# ░░░░░██  ██░██ ░██  ░██░██░██ ░██  ░██
+# ██████  ██ ░░██░██  ░██░██░░██░░██████
+#░░░░░░  ░░   ░░ ░░   ░░ ░░  ░░  ░░░░░░ 
+
+#
+# wm independent hotkeys
+
+# legit MODIFIER names: super, hyper, meta, alt, control, ctrl, shift, mode_switch, lock, mod1, mod2, mod3, mod4, mod5
+
+############### Screenshots ###############
+alt + shift + 4
+  maim --select | tee ~/Pictures/Screenshots/$(date +%Y%m%d-%H%M%S ).png | xclip -selection clipboard -t image/png 
+
+alt + shift + 5
+  maim ~/Pictures/Screenshots/$(date +%Y%m%d-%H%M ).png
+
+/############### ROFI ############### 
+alt + r 
+  rofi -show run
+
+alt + space 
+  rofi -show run
+
+############### Terminal ###############
+alt + Return
+  kitty
+ 
+shift + ctrl + Return 
+  kitty -e ranger
+
+ctrl + alt + d 
+  kitty -e htop
+
+############### Browser ###############
+alt + f
+  firefox
+
+############### Filemanager ###############
+ctrl + Return
+  pcmanfm
+
