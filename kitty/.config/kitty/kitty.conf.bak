@@ -1,0 +1,7 @@
+# BEGIN_KITTY_THEME
+# Adapta Nokto Maia
+include current-theme.conf
+window_padding_width 20
+font_size 16.0
+confirm_os_window_close 0
+# END_KITTY_THEME
