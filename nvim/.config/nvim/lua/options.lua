@@ -15,7 +15,7 @@ local options = {
 	tabstop = 2,                             -- number of spaces inserted for a tab
 	relativenumber = true,                   -- set relative numbered lines
 	number=true,                             -- show actual linenumber on current line 
-	spelllang="en_us,de_de",                 -- configure Languages for Spellchecking
+	spelllang="en_us",                 -- configure Languages for Spellchecking
 	spell = true,                            -- activate spellchecking
 	wrap = false,                            -- display lines as one long line
 	scrolloff = 5,                           -- Keep cursor away from edges of screen  
@@ -34,7 +34,6 @@ local options = {
 	tabline= " ",
 }
 vim.opt.wildoptions:remove('pum')
-	
 -- show Tab Indentation
 vim.opt.list=true
 vim.opt.lcs='tab:| ,trail:-'

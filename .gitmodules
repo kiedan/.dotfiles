@@ -1,3 +1,9 @@
 [submodule "fonts/.fonts/figlet-fonts"]
 	path = fonts/.fonts/figlet-fonts
 	url = https://github.com/xero/figlet-fonts.git
+[submodule "tmux/.config/tmux/plugins/tmux-gruvbo"]
+	path = tmux/.config/tmux/plugins/tmux-gruvbo
+	url = https://github.com/egel/tmux-gruvbox
+[submodule "tmux/.config/tmux/plugins/tmux-gruvbox"]
+	path = tmux/.config/tmux/plugins/tmux-gruvbox
+	url = https://github.com/egel/tmux-gruvbox

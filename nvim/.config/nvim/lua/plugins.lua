@@ -34,13 +34,19 @@ require("lazy").setup({
     {'nvim-telescope/telescope.nvim', tag = '0.1.4', dependencies = { 'nvim-lua/plenary.nvim' }},
     {'vimwiki/vimwiki',
 		init = function()
-			vim.g.vimwiki_list = {{path = '~/Nextcloud/SpaceNotes', syntax = 'markdown', ext = '.md'}}
+			vim.g.vimwiki_list = {{path = '~/Nextcloud/Notes',  diary_rel_path = '', syntax = 'markdown', ext = '.md'}}
 			vim.keymap.set("", "<Leader>wd", ":VimwikiDiaryIndex<CR>", { silent = true })
 			vim.keymap.set("", "<Leader>wg", ":VimwikiDiaryGenerateLinks<CR>", { silent = true })
+			vim.keymap.set("", "<Leader><Cr>", ":VimwikiVSplitLink 1<CR>", { silent = true })
+			vim.keymap.set("", "<S-CR>", ":VimwikiVSplitLink<CR>", { silent = true })
 			vim.cmd("autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks")
 		end
 	},
-
+	{
+			'MeanderingProgrammer/render-markdown.nvim',
+			opts = {},
+			dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+	},
 	-- Color Scheme
 	{
 		"ellisonleao/gruvbox.nvim",
@@ -57,13 +63,13 @@ require("lazy").setup({
 		build = ":TSUpdate",
 		config = function ()
 		  local configs = require("nvim-treesitter.configs")
-
 		  configs.setup({
 			  ensure_installed = { "lua", "vim", "vimdoc", "javascript", "html" },
 			  sync_install = false,
 			  highlight = { enable = true },
 			  indent = { enable = true },
 			})
+			vim.treesitter.language.register('markdown', 'vimwiki') -- needed for markdown plugin to work with vimwiki
 		end
 	 },
 
@@ -79,7 +85,6 @@ require("lazy").setup({
 	{'L3MON4D3/LuaSnip'},
 	{"L3MON4D3/LuaSnip",dependencies = { "rafamadriz/friendly-snippets" },},
 	{'https://github.com/phelipetls/vim-hugo.git'},
-
 	{ 'nvim-tree/nvim-tree.lua',
 		version = "*",
 		lazy = false,

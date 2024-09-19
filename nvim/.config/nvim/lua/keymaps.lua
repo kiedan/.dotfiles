@@ -82,10 +82,10 @@ vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")
 
 -- Move current line up and down  
-vim.keymap.set("n", "<C-down>", ":move +1<CR>")
-vim.keymap.set("n", "<C-up>", ":move -2<CR>")
-vim.keymap.set("v", "<C-down>", ":move '>+1<CR>gv=gv' ")
-vim.keymap.set("v", "<C-up>", ":move '<-2<CR>gv=gv' ")
+vim.keymap.set("n", "<S-C-down>", ":move +1<CR>")
+vim.keymap.set("n", "<S-C-up>", ":move -2<CR>")
+vim.keymap.set("v", "<S-C-down>", ":move '>+1<CR>gv=gv' ")
+vim.keymap.set("v", "<S-C-up>", ":move '<-2<CR>gv=gv' ")
 
 -- Entering blank lines without going into insert
 vim.keymap.set("n", "<Leader>o", "o<Esc>k")
@@ -109,15 +109,15 @@ vim.keymap.set("n", "<C-a>", "ggVG")
 
 -- BUFFER AND SPLIT NAVIGATION
 
--- Move to previous/next
-vim.keymap.set('n', '<Leader>h', ':bp<cr>', { silent = true })
-vim.keymap.set('n', '<Leader>l', ':bn<CR>', { silent = true })
+-- Move to previous/next buffer
+vim.keymap.set('n', '<C-h>', ':bp<cr>', { silent = true })
+vim.keymap.set('n', '<C>', ':bn<CR>', { silent = true })
 
 -- Better navigation through splits
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<Leader>h", "<C-w>h")
+vim.keymap.set("n", "<Leader>j", "<C-w>j")
+vim.keymap.set("n", "<Leader>k", "<C-w>k")
+vim.keymap.set("n", "<Leader>l", "<C-w>l")
 
 -- Split control
 vim.keymap.set("n", "<Leader>+", "<C-w>v")
@@ -176,13 +176,15 @@ vim.keymap.set("n", "<Leader>am", ":.!figlet -f miniwi<CR>")
 vim.keymap.set("n", "<Leader>ac", ":.!figlet -f Cybermedium<CR>")
 vim.keymap.set("n", "<Leader>ad", ":.!figlet -f Doom<CR>")
 
+
+
 -- VimWiki Notes 
 vim.keymap.set("n", "<Leader>ni", ":VimwikiDiaryIndex<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>nm", ":VimwikiMakeDiaryNote<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>nn", ":VimwikiMakeDiaryNote<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>ng", ":VimwikiDiaryGenerateLinks<CR>", { silent = true })
-vim.keymap.set("", "<Leader>nn", "@<Plug>VimwikiDiaryNextDay", { silent = true })
+vim.keymap.set("", "<Leader>nt", "@<Plug>VimwikiDiaryNextDay", { silent = true })
 vim.keymap.set("", "<Leader>np", "@<Plug>VimwikiDiaryPrevDay", { silent = true })
 vim.keymap.set("", "<Leader>nx", ":VimwikiDeleteFile<CR>", {})
 vim.keymap.set("", "<Leader>nr", ":VimwikiRenameFile<CR>", {})
-vim.keymap.set("", "<Leader><CR>", ":VimwikiVSplitLink reuse<CR> | :vertical resize +20<CR>", {})
-vim.keymap.set("n", "<Leader>nt", ":e ~/Nextcloud/SpaceNotes/todo.txt<CR>", { silent = true })
+vim.keymap.set("", "<Leader><CR>", ":VimwikiVSplitLink reuse <bar> :vertical resize +30<CR>", {})
+vim.keymap.set("n", "<Leader>td", ":e ~/Nextcloud/Notes/todo.txt<CR>", { silent = true })
